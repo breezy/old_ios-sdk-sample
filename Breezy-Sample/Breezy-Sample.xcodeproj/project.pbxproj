@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A01F6581521925700886C43 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A01F6571521925700886C43 /* AssetsLibrary.framework */; };
+		1A01F66715221FE800886C43 /* clouds.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A01F66615221FE800886C43 /* clouds.png */; };
+		1A01F66B15227A6C00886C43 /* BreezyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A01F66A15227A6C00886C43 /* BreezyButton.m */; };
+		1A01F66D15227A8B00886C43 /* iphone_button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A01F66C15227A8B00886C43 /* iphone_button_normal.png */; };
+		1A01F66F15227A9500886C43 /* iphone_button_disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A01F66E15227A9500886C43 /* iphone_button_disabled.png */; };
+		1A01F67115227A9F00886C43 /* iphone_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A01F67015227A9F00886C43 /* iphone_button_pressed.png */; };
+		1A01F6741522AD2F00886C43 /* demo_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A01F6731522AD2F00886C43 /* demo_retina.png */; };
+		1A01F6761522AD4500886C43 /* demo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A01F6751522AD4500886C43 /* demo.png */; };
+		1A68CADB151FEF4B00A60755 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A68CADA151FEF4B00A60755 /* UIKit.framework */; };
+		1A68CADD151FEF4B00A60755 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A68CADC151FEF4B00A60755 /* Foundation.framework */; };
+		1A68CADF151FEF4B00A60755 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A68CADE151FEF4B00A60755 /* CoreGraphics.framework */; };
+		1A68CAE5151FEF4B00A60755 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A68CAE3151FEF4B00A60755 /* InfoPlist.strings */; };
+		1A68CAE7151FEF4B00A60755 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A68CAE6151FEF4B00A60755 /* main.m */; };
+		1A68CAEB151FEF4B00A60755 /* Breezy_SampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A68CAEA151FEF4B00A60755 /* Breezy_SampleAppDelegate.m */; };
+		1A68CAEE151FEF4B00A60755 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A68CAEC151FEF4B00A60755 /* MainWindow.xib */; };
+		1A68CAF1151FEF4C00A60755 /* Breezy_SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A68CAF0151FEF4C00A60755 /* Breezy_SampleViewController.m */; };
+		1A68CAF4151FEF4C00A60755 /* Breezy_SampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A68CAF2151FEF4C00A60755 /* Breezy_SampleViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A01F6571521925700886C43 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		1A01F66615221FE800886C43 /* clouds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clouds.png; sourceTree = "<group>"; };
+		1A01F66915227A6C00886C43 /* BreezyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BreezyButton.h; sourceTree = "<group>"; };
+		1A01F66A15227A6C00886C43 /* BreezyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BreezyButton.m; sourceTree = "<group>"; };
+		1A01F66C15227A8B00886C43 /* iphone_button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone_button_normal.png; sourceTree = "<group>"; };
+		1A01F66E15227A9500886C43 /* iphone_button_disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone_button_disabled.png; sourceTree = "<group>"; };
+		1A01F67015227A9F00886C43 /* iphone_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone_button_pressed.png; sourceTree = "<group>"; };
+		1A01F6731522AD2F00886C43 /* demo_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo_retina.png; sourceTree = "<group>"; };
+		1A01F6751522AD4500886C43 /* demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo.png; sourceTree = "<group>"; };
+		1A68CAD6151FEF4B00A60755 /* Breezy Photo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Breezy Photo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A68CADA151FEF4B00A60755 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1A68CADC151FEF4B00A60755 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1A68CADE151FEF4B00A60755 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1A68CAE2151FEF4B00A60755 /* Breezy-Sample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Breezy-Sample-Info.plist"; sourceTree = "<group>"; };
+		1A68CAE4151FEF4B00A60755 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1A68CAE6151FEF4B00A60755 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A68CAE8151FEF4B00A60755 /* Breezy-Sample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Breezy-Sample-Prefix.pch"; sourceTree = "<group>"; };
+		1A68CAE9151FEF4B00A60755 /* Breezy_SampleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Breezy_SampleAppDelegate.h; sourceTree = "<group>"; };
+		1A68CAEA151FEF4B00A60755 /* Breezy_SampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Breezy_SampleAppDelegate.m; sourceTree = "<group>"; };
+		1A68CAED151FEF4B00A60755 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		1A68CAEF151FEF4B00A60755 /* Breezy_SampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Breezy_SampleViewController.h; sourceTree = "<group>"; };
+		1A68CAF0151FEF4C00A60755 /* Breezy_SampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Breezy_SampleViewController.m; sourceTree = "<group>"; };
+		1A68CAF3151FEF4C00A60755 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Breezy_SampleViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A68CAD3151FEF4B00A60755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A01F6581521925700886C43 /* AssetsLibrary.framework in Frameworks */,
+				1A68CADB151FEF4B00A60755 /* UIKit.framework in Frameworks */,
+				1A68CADD151FEF4B00A60755 /* Foundation.framework in Frameworks */,
+				1A68CADF151FEF4B00A60755 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A01F6721522AB0800886C43 /* Assests */ = {
+			isa = PBXGroup;
+			children = (
+				1A01F67015227A9F00886C43 /* iphone_button_pressed.png */,
+				1A01F66E15227A9500886C43 /* iphone_button_disabled.png */,
+				1A01F66C15227A8B00886C43 /* iphone_button_normal.png */,
+				1A01F66615221FE800886C43 /* clouds.png */,
+			);
+			name = Assests;
+			sourceTree = "<group>";
+		};
+		1A68CACB151FEF4B00A60755 = {
+			isa = PBXGroup;
+			children = (
+				1A01F6751522AD4500886C43 /* demo.png */,
+				1A01F6731522AD2F00886C43 /* demo_retina.png */,
+				1A01F6571521925700886C43 /* AssetsLibrary.framework */,
+				1A68CAE0151FEF4B00A60755 /* Breezy-Sample */,
+				1A68CAD9151FEF4B00A60755 /* Frameworks */,
+				1A68CAD7151FEF4B00A60755 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1A68CAD7151FEF4B00A60755 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A68CAD6151FEF4B00A60755 /* Breezy Photo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A68CAD9151FEF4B00A60755 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A68CADA151FEF4B00A60755 /* UIKit.framework */,
+				1A68CADC151FEF4B00A60755 /* Foundation.framework */,
+				1A68CADE151FEF4B00A60755 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A68CAE0151FEF4B00A60755 /* Breezy-Sample */ = {
+			isa = PBXGroup;
+			children = (
+				1A01F6721522AB0800886C43 /* Assests */,
+				1A68CAE9151FEF4B00A60755 /* Breezy_SampleAppDelegate.h */,
+				1A68CAEA151FEF4B00A60755 /* Breezy_SampleAppDelegate.m */,
+				1A68CAEC151FEF4B00A60755 /* MainWindow.xib */,
+				1A68CAEF151FEF4B00A60755 /* Breezy_SampleViewController.h */,
+				1A68CAF0151FEF4C00A60755 /* Breezy_SampleViewController.m */,
+				1A68CAF2151FEF4C00A60755 /* Breezy_SampleViewController.xib */,
+				1A68CAE1151FEF4B00A60755 /* Supporting Files */,
+			);
+			path = "Breezy-Sample";
+			sourceTree = "<group>";
+		};
+		1A68CAE1151FEF4B00A60755 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A01F66915227A6C00886C43 /* BreezyButton.h */,
+				1A01F66A15227A6C00886C43 /* BreezyButton.m */,
+				1A68CAE2151FEF4B00A60755 /* Breezy-Sample-Info.plist */,
+				1A68CAE3151FEF4B00A60755 /* InfoPlist.strings */,
+				1A68CAE6151FEF4B00A60755 /* main.m */,
+				1A68CAE8151FEF4B00A60755 /* Breezy-Sample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A68CAD5151FEF4B00A60755 /* Breezy-Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A68CAF7151FEF4C00A60755 /* Build configuration list for PBXNativeTarget "Breezy-Sample" */;
+			buildPhases = (
+				1A68CAD2151FEF4B00A60755 /* Sources */,
+				1A68CAD3151FEF4B00A60755 /* Frameworks */,
+				1A68CAD4151FEF4B00A60755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Breezy-Sample";
+			productName = "Breezy-Sample";
+			productReference = 1A68CAD6151FEF4B00A60755 /* Breezy Photo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A68CACD151FEF4B00A60755 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1A68CAD0151FEF4B00A60755 /* Build configuration list for PBXProject "Breezy-Sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1A68CACB151FEF4B00A60755;
+			productRefGroup = 1A68CAD7151FEF4B00A60755 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A68CAD5151FEF4B00A60755 /* Breezy-Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A68CAD4151FEF4B00A60755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A68CAE5151FEF4B00A60755 /* InfoPlist.strings in Resources */,
+				1A68CAEE151FEF4B00A60755 /* MainWindow.xib in Resources */,
+				1A68CAF4151FEF4C00A60755 /* Breezy_SampleViewController.xib in Resources */,
+				1A01F66715221FE800886C43 /* clouds.png in Resources */,
+				1A01F66D15227A8B00886C43 /* iphone_button_normal.png in Resources */,
+				1A01F66F15227A9500886C43 /* iphone_button_disabled.png in Resources */,
+				1A01F67115227A9F00886C43 /* iphone_button_pressed.png in Resources */,
+				1A01F6741522AD2F00886C43 /* demo_retina.png in Resources */,
+				1A01F6761522AD4500886C43 /* demo.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A68CAD2151FEF4B00A60755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A68CAE7151FEF4B00A60755 /* main.m in Sources */,
+				1A68CAEB151FEF4B00A60755 /* Breezy_SampleAppDelegate.m in Sources */,
+				1A68CAF1151FEF4C00A60755 /* Breezy_SampleViewController.m in Sources */,
+				1A01F66B15227A6C00886C43 /* BreezyButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1A68CAE3151FEF4B00A60755 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A68CAE4151FEF4B00A60755 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1A68CAEC151FEF4B00A60755 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A68CAED151FEF4B00A60755 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		1A68CAF2151FEF4C00A60755 /* Breezy_SampleViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A68CAF3151FEF4C00A60755 /* en */,
+			);
+			name = Breezy_SampleViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A68CAF5151FEF4C00A60755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1A68CAF6151FEF4C00A60755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1A68CAF8151FEF4C00A60755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Breezy-Sample/Breezy-Sample-Prefix.pch";
+				INFOPLIST_FILE = "Breezy-Sample/Breezy-Sample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "Breezy Photo";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1A68CAF9151FEF4C00A60755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Breezy-Sample/Breezy-Sample-Prefix.pch";
+				INFOPLIST_FILE = "Breezy-Sample/Breezy-Sample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "Breezy Photo";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A68CAD0151FEF4B00A60755 /* Build configuration list for PBXProject "Breezy-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A68CAF5151FEF4C00A60755 /* Debug */,
+				1A68CAF6151FEF4C00A60755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A68CAF7151FEF4C00A60755 /* Build configuration list for PBXNativeTarget "Breezy-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A68CAF8151FEF4C00A60755 /* Debug */,
+				1A68CAF9151FEF4C00A60755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A68CACD151FEF4B00A60755 /* Project object */;
+}
