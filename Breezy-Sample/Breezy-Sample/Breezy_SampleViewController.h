@@ -10,7 +10,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 
 
-@interface Breezy_SampleViewController : UIViewController <UIImagePickerControllerDelegate>
+@interface Breezy_SampleViewController : UIViewController <UIImagePickerControllerDelegate, UIDocumentInteractionControllerDelegate>
 {
     IBOutlet UIButton *button;
     IBOutlet UIButton *printButton;

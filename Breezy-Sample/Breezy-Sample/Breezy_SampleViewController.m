@@ -52,17 +52,58 @@
 }
 
 - (IBAction)printWithBreezy {
-    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); 
-    NSString* documentsDirectory = [paths objectAtIndex:0];
-    NSString* imageFile = [documentsDirectory stringByAppendingPathComponent:@"test.jpg"];
+   
     
-    //////////////////////////////////////////////////////////////////////////////
-    //To print with Breezy simple pass a NSUrl to the Breezy Application
-    NSURL *url = [NSURL fileURLWithPath:imageFile];
-    NSString* urlString = [NSString stringWithFormat:@"breezy://%@", url];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
-    //////////////////////////////////////////////////////////////////////////////
+	//get the documents directory:
+	NSArray *paths = NSSearchPathForDirectoriesInDomains
+	(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+
+	NSString *fileName = [NSString stringWithFormat:@"%@/textfile.txt.breezy", 
+						  documentsDirectory];
+    
+    
+    NSURL *url = [NSURL fileURLWithPath:fileName];
+
+	NSString *content = @"One\nTwo\nThree\nFour\nFive";
+	
+    NSError *error;
+	BOOL ok = [content writeToFile:fileName 
+			  atomically:NO 
+				encoding:NSStringEncodingConversionAllowLossy 
+				   error:&error];
+    
+    if (!ok)
+    {
+        NSLog(@"Error writing file at %@\n%@ %@",
+              fileName, [error localizedFailureReason], [error description]);
+    }
+       UIDocumentInteractionController *doc=[[UIDocumentInteractionController interactionControllerWithURL:url] retain];
+
+    doc.delegate = self;
+    doc.UTI = @"com.breezy.ios";
+    
+    BOOL isValid = [doc presentOpenInMenuFromRect:CGRectZero inView:self.view.window animated:YES];
 }
+
+
+//delegates
+-(void)documentInteractionController:(UIDocumentInteractionController *)controller 
+       willBeginSendingToApplication:(NSString *)application {
+    NSLog(@"1 willBeginSendingToApplication || %@",application);
+    
+}
+
+-(void)documentInteractionController:(UIDocumentInteractionController *)controller 
+          didEndSendingToApplication:(NSString *)application {
+     NSLog(@"2");
+}
+
+-(void)documentInteractionControllerDidDismissOpenInMenu:
+(UIDocumentInteractionController *)controller {
+     NSLog(@"3");
+}
+
 
 - (void)imagePickerController:(UIImagePickerController *)picker 
 didFinishPickingMediaWithInfo:(NSDictionary *)info {

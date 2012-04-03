@@ -4,3 +4,8 @@ To open an image or file with Breezy follow the example below:
 NSURL *url = [NSURL fileURLWithPath:imageFile];
 NSString* urlString = [NSString stringWithFormat:@"breezy://%@", url];
 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+
+
+NSURL *url = [NSURL fileURLWithPath:imageFile];
+NSString* urlString = [NSString stringWithFormat:@"breezy://%@", url];
+[[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];

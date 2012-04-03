@@ -24,6 +24,7 @@
 		1A68CAEE151FEF4B00A60755 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A68CAEC151FEF4B00A60755 /* MainWindow.xib */; };
 		1A68CAF1151FEF4C00A60755 /* Breezy_SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A68CAF0151FEF4C00A60755 /* Breezy_SampleViewController.m */; };
 		1A68CAF4151FEF4C00A60755 /* Breezy_SampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A68CAF2151FEF4C00A60755 /* Breezy_SampleViewController.xib */; };
+		1AA011EF15251E9D00A92B4F /* BreezyMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA011EE15251E9D00A92B4F /* BreezyMain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		1A68CAEF151FEF4B00A60755 /* Breezy_SampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Breezy_SampleViewController.h; sourceTree = "<group>"; };
 		1A68CAF0151FEF4C00A60755 /* Breezy_SampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Breezy_SampleViewController.m; sourceTree = "<group>"; };
 		1A68CAF3151FEF4C00A60755 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Breezy_SampleViewController.xib; sourceTree = "<group>"; };
+		1AA011ED15251E9D00A92B4F /* BreezyMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BreezyMain.h; sourceTree = "<group>"; };
+		1AA011EE15251E9D00A92B4F /* BreezyMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BreezyMain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,7 @@
 		1A68CAE0151FEF4B00A60755 /* Breezy-Sample */ = {
 			isa = PBXGroup;
 			children = (
+				1AA011F115252BBE00A92B4F /* SDK */,
 				1A01F6721522AB0800886C43 /* Assests */,
 				1A68CAE9151FEF4B00A60755 /* Breezy_SampleAppDelegate.h */,
 				1A68CAEA151FEF4B00A60755 /* Breezy_SampleAppDelegate.m */,
@@ -134,6 +138,15 @@
 				1A68CAE8151FEF4B00A60755 /* Breezy-Sample-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1AA011F115252BBE00A92B4F /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				1AA011ED15251E9D00A92B4F /* BreezyMain.h */,
+				1AA011EE15251E9D00A92B4F /* BreezyMain.m */,
+			);
+			name = SDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +219,7 @@
 				1A68CAEB151FEF4B00A60755 /* Breezy_SampleAppDelegate.m in Sources */,
 				1A68CAF1151FEF4C00A60755 /* Breezy_SampleViewController.m in Sources */,
 				1A01F66B15227A6C00886C43 /* BreezyButton.m in Sources */,
+				1AA011EF15251E9D00A92B4F /* BreezyMain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,11 +299,15 @@
 		1A68CAF8151FEF4C00A60755 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: James Graham (472CRZWXQ4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: James Graham (472CRZWXQ4)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Breezy-Sample/Breezy-Sample-Prefix.pch";
 				INFOPLIST_FILE = "Breezy-Sample/Breezy-Sample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "Breezy Photo";
+				PROVISIONING_PROFILE = "5E09BC92-EC42-402C-9E6F-96CDCEE5E446";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5E09BC92-EC42-402C-9E6F-96CDCEE5E446";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -297,11 +315,13 @@
 		1A68CAF9151FEF4C00A60755 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: James Graham (472CRZWXQ4)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Breezy-Sample/Breezy-Sample-Prefix.pch";
 				INFOPLIST_FILE = "Breezy-Sample/Breezy-Sample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "Breezy Photo";
+				PROVISIONING_PROFILE = "5E09BC92-EC42-402C-9E6F-96CDCEE5E446";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
