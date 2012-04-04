@@ -12,6 +12,6 @@
 @optional
 -(void)sendingDocument;
 -(void)sendingDocumentFailed: (NSError *)error;
--(void)sendingDocumentComplete;
+-(void)sendingDocumentComplete :(int)documentId;
 
 @end

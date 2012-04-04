@@ -12,7 +12,7 @@
 #import "PrintModuleDelegate.h"
 
 
-@interface Breezy_SampleViewController : UIViewController <UIImagePickerControllerDelegate, UIDocumentInteractionControllerDelegate, PrintModuleDelegate>
+@interface Breezy_SampleViewController : UIViewController <UIImagePickerControllerDelegate, UIDocumentInteractionControllerDelegate, PrintModuleDelegate, UIAlertViewDelegate>
 {
     IBOutlet UIButton *button;
     IBOutlet UIButton *printButton;

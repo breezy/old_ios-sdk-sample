@@ -7,7 +7,6 @@
 #import "ASIHTTPRequest.h"
 #import "JSON.h"
 
-
 @interface PrintModule ()
 
 @end
@@ -19,15 +18,13 @@ NSOperationQueue *requestQueue;
 @synthesize delegate, requestQueue;
 
 #pragma logic
--(void)sendDocumentToBreezy:(NSURL *)documentUrl/*:(UIProgressView *)progressIndicator*/
+-(void)sendDocumentToBreezy:(NSURL *)documentUrl
 {
-    NSLog(@"print Document fired");
-    NSLog(@"Sending document at path %@",documentUrl);
     Document *documentToPrint = [[Document alloc] initWithDocumentPath:documentUrl];
     
     NSMutableData *mutableDocData = [[NSMutableData alloc] initWithData:documentToPrint.documentData];
     
-    NSString *url = [[NSString alloc] initWithFormat:@"%@breezy_cloud_print?friendly_name=%@&file_extension=%@&client_id=%@&client_secret=%@&is_breezy_cloud_print=%@", @"http://api.local:3000/", [documentToPrint.documentName stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding], documentToPrint.extension, @"", @"",@"1"];
+    NSString *url = [[NSString alloc] initWithFormat:@"%@breezy_cloud_print?friendly_name=%@&file_extension=%@&client_id=%@&client_secret=%@&is_breezy_cloud_print=%@", @"http://api.local:3000/", [documentToPrint.documentName stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding], documentToPrint.extension, @"59568b2e-92c9-483e-b899-f0881dcd027a", @"f93f8073-f3dd-4c63-9512-2a4fe9302a49",@"1"];
     
    
     ![self requestQueue] ? [self setRequestQueue:[[[NSOperationQueue alloc] init] autorelease]] : nil;
@@ -35,18 +32,14 @@ NSOperationQueue *requestQueue;
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString: url]];
     [url release];
     [request setDelegate:self];
-    
-//    if (progressIndicator != nil)
-//    {
-//        [request setUploadProgressDelegate:progressIndicator];
-//    }
+
     [request addRequestHeader:@"content-type" value:@"application/octet-stream"];
     [request setPostBody:mutableDocData];
     [mutableDocData release];
   
     [request setDidStartSelector:@selector(sendingDocument)];
     [request setDidFailSelector:@selector(sendingRequestFailed:)];
-    [request setDidFinishSelector:@selector(sendingDocumentComplete)];
+    [request setDidFinishSelector:@selector(sendingDocumentCompleteParse:)];
     [[self requestQueue] addOperation:request];
    
     
@@ -54,52 +47,6 @@ NSOperationQueue *requestQueue;
     
 }
 
-
-
-////Sends a request with which printer and the file that is for printing
-//-(void)printDocument:(Printer *)printer: (NSURL *)documentUrl: (UIProgressView *)progressIndicator: (bool)encrypt
-//{
-//    Document *documentToPrint = [[Document alloc] initWithDocumentPath:documentUrl];
-//    
-//    NSString *encryptedDataUrl = [[NSString alloc] init];
-//
-//    if (encrypt)
-//    {
-//
-//    }
-//    if (documentToPrint.documentData != nil)
-//    {
-//        if (![self requestQueue])
-//        {
-//            [self setRequestQueue:[[[NSOperationQueue alloc] init] autorelease]];
-//        }
-//
-//        NSMutableData *mutableDocData = [[NSMutableData alloc] initWithData:documentToPrint.documentData];
-//               
-//        if (printer.numberOfCopies <= 0) { printer.numberOfCopies = 1; }
-//        NSString *url = [[NSString alloc] initWithFormat:@"%@document?oauth_token=%@&friendly_name=%@&file_extension=%@&endpoint_id=%ld&use_coversheet=%@&use_color=%@&use_duplex=%@&number_of_copies=%i%@&landscape=%@", @"BASE SERVICE ADDRESS", @"OAUTH TOKEN", [documentToPrint.documentName stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding], documentToPrint.extension, printer.printerId, (printer.includeCoverSheet == YES) ? @"true": @"false", (printer.useColor == YES) ? @"true": @"false", (printer.useDuplex == YES) ? @"true": @"false", printer.numberOfCopies,encryptedDataUrl,(printer.useLandscape == YES) ? @"true": @"false"];
-//        
-//        ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString: url]];
-//        [url release];
-//        
-//        [request setDelegate:self];
-//               
-//        if (progressIndicator != nil)
-//        {
-//            [request setUploadProgressDelegate:progressIndicator];
-//        }
-//        [request addRequestHeader:@"content-type" value:@"application/octet-stream"];
-//        [request setPostBody:mutableDocData];
-//        [mutableDocData release];
-//        
-//        [request setDidStartSelector:@selector(printingDocument)];
-//        [request setDidFailSelector:@selector(printRequestFailed:)];
-//        [request setDidFinishSelector:@selector(printingDocumentComplete)];
-//        [[self requestQueue] addOperation:request];
-//    }
-//    
-//    [documentToPrint release];
-//}
 
 //delegate method used for showing that the document is printing
 -(void)sendingDocument
@@ -126,18 +73,28 @@ NSOperationQueue *requestQueue;
     }
 }
 
-//delegate method used for showing that the print request is complete
--(void)printRequestComplete: (ASIHTTPRequest *)request
+-(void)sendingDocumentCompleteParse: (ASIHTTPRequest *)request
 {
-    [self sendingDocumentComplete];
+     NSLog(@"parse request %@",request.responseString);
+ 
+    SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
+    NSDictionary *responseStringDictionary = [jsonParser objectWithString:request.responseString error:nil];
+    [jsonParser release], jsonParser = nil;
+    int documentId = [[responseStringDictionary objectForKey:@"document_id"] intValue];
+  
+    NSLog(@"document id %i",documentId);
+    
+    [self sendingDocumentComplete:documentId];
 }
 
+
 //delegate method used for showing that the printing is complete
--(void)sendingDocumentComplete
+-(void)sendingDocumentComplete: (int)documentId
 {
-    if([[self delegate] respondsToSelector:@selector(sendingDocumentComplete)])
+     
+    if([[self delegate] respondsToSelector:@selector(sendingDocumentComplete:)])
     {
-        [[self delegate] sendingDocumentComplete];
+        [[self delegate] sendingDocumentComplete:documentId];
     }
 }
 

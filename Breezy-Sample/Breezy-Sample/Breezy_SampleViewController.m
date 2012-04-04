@@ -14,28 +14,48 @@
 
 ///////////////////////////////////
 //Breezy SDK Required Code - Begin
-///////////////////////////////////
 - (IBAction)printWithBreezy {
-    
+    NSString *stringURL = [[NSString alloc] initWithString:@"breezy://document_id=?"];
+    NSURL *url = [NSURL URLWithString:stringURL];
+    if(![[UIApplication sharedApplication] canOpenURL:url])
+    {
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Breezy Not Installed"
+                                                          message:@"Breezy is the world's most secure mobile printing app.  Download it now to continue printing this document."
+                                                         delegate:self
+                                                cancelButtonTitle:@"Cancel"
+                                                otherButtonTitles:@"Download",nil];
+        message.tag = 1;
+        [message show];
+    }
+    else
+    {
     PrintModule *breezy = [[PrintModule alloc] init];
     breezy.delegate = self;
     [breezy sendDocumentToBreezy:imageURL];
-    
+    }
 }
 
 -(void)sendingDocument
 {
-    NSLog(@"*Alert the user the document is sending");
+    NSLog(@"Show loading modal with existing framework");
 }
 -(void)sendingDocumentFailed: (NSError *)error
 {
-    NSLog(@"Alert the user the process has failed.");
-    NSLog(@"with error | %@",[error description]);
+    NSLog(@"Alert the user the process has failed with error %@",[error description]);
 }
--(void)sendingDocumentComplete
+-(void)sendingDocumentComplete:(int)documentId;
 {
-    NSLog(@"*Alert the user the proess is complete and call the breezy app with the documentID");
+    NSString *stringURL = [[NSString alloc] initWithFormat:@"breezy://document_id=%i",documentId];
+    NSURL *url = [NSURL URLWithString:stringURL];
+    [[UIApplication sharedApplication] openURL:url];
 }
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == 1 && buttonIndex == 1) {
+        [[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"http://itunes.apple.com/us/app/breezy-print-and-fax/id438846342?mt=8&uo=6"]];
+    }
+}
+
 /////////////////////////////////
 //Breezy SDK Required Code - End
 /////////////////////////////////

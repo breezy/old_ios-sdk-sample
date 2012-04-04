@@ -18,7 +18,7 @@
 
 //-(void)printDocument:(Printer *)printer: (NSURL *)documentUrl: (UIProgressView *)progressIndicator :(bool)encrypt;
 
--(void)sendDocumentToBreezy:(NSURL *)documentUrl/*:(UIProgressView *)progressIndicator*/;
+-(void)sendDocumentToBreezy:(NSURL *)documentUrl;
 
 -(void)cancelPrinting;
 
