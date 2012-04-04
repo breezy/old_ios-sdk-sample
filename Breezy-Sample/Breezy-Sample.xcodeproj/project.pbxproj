@@ -15,6 +15,32 @@
 		1A01F67115227A9F00886C43 /* iphone_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A01F67015227A9F00886C43 /* iphone_button_pressed.png */; };
 		1A01F6741522AD2F00886C43 /* demo_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A01F6731522AD2F00886C43 /* demo_retina.png */; };
 		1A01F6761522AD4500886C43 /* demo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A01F6751522AD4500886C43 /* demo.png */; };
+		1A4FC4FF152B960C00D0B2A9 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FBF56152B960A00D0B2A9 /* ASIAuthenticationDialog.m */; };
+		1A4FC500152B960C00D0B2A9 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FBF59152B960A00D0B2A9 /* ASIDataCompressor.m */; };
+		1A4FC501152B960C00D0B2A9 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FBF5B152B960A00D0B2A9 /* ASIDataDecompressor.m */; };
+		1A4FC502152B960C00D0B2A9 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FBF5D152B960A00D0B2A9 /* ASIDownloadCache.m */; };
+		1A4FC503152B960C00D0B2A9 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FBF5F152B960A00D0B2A9 /* ASIFormDataRequest.m */; };
+		1A4FC504152B960C00D0B2A9 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FBF61152B960A00D0B2A9 /* ASIHTTPRequest.m */; };
+		1A4FC505152B960C00D0B2A9 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FBF65152B960A00D0B2A9 /* ASIInputStream.m */; };
+		1A4FC506152B960C00D0B2A9 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FBF67152B960A00D0B2A9 /* ASINetworkQueue.m */; };
+		1A4FC50F152B960C00D0B2A9 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FBF7C152B960A00D0B2A9 /* Document.m */; };
+		1A4FC516152B960C00D0B2A9 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FBF8D152B960A00D0B2A9 /* NSObject+JSON.m */; };
+		1A4FC57F152B960D00D0B2A9 /* PrintModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FC4C4152B960B00D0B2A9 /* PrintModule.m */; };
+		1A4FC587152B960D00D0B2A9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FC4D8152B960B00D0B2A9 /* Reachability.m */; };
+		1A4FC588152B960D00D0B2A9 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FC4DB152B960B00D0B2A9 /* SBJsonParser.m */; };
+		1A4FC589152B960D00D0B2A9 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FC4DD152B960B00D0B2A9 /* SBJsonStreamParser.m */; };
+		1A4FC58A152B960D00D0B2A9 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FC4DF152B960B00D0B2A9 /* SBJsonStreamParserAccumulator.m */; };
+		1A4FC58B152B960D00D0B2A9 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FC4E1152B960B00D0B2A9 /* SBJsonStreamParserAdapter.m */; };
+		1A4FC58C152B960D00D0B2A9 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FC4E3152B960B00D0B2A9 /* SBJsonStreamParserState.m */; };
+		1A4FC58D152B960D00D0B2A9 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FC4E5152B960B00D0B2A9 /* SBJsonStreamWriter.m */; };
+		1A4FC58E152B960D00D0B2A9 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FC4E7152B960B00D0B2A9 /* SBJsonStreamWriterAccumulator.m */; };
+		1A4FC58F152B960D00D0B2A9 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FC4E9152B960B00D0B2A9 /* SBJsonStreamWriterState.m */; };
+		1A4FC590152B960D00D0B2A9 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FC4EB152B960B00D0B2A9 /* SBJsonTokeniser.m */; };
+		1A4FC591152B960D00D0B2A9 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FC4ED152B960B00D0B2A9 /* SBJsonWriter.m */; };
+		1A4FC59D152B97CA00D0B2A9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4FC59C152B97CA00D0B2A9 /* CFNetwork.framework */; };
+		1A4FC59F152B97CE00D0B2A9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4FC59E152B97CE00D0B2A9 /* SystemConfiguration.framework */; };
+		1A4FC5A1152B97D400D0B2A9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4FC5A0152B97D400D0B2A9 /* MobileCoreServices.framework */; };
+		1A4FC5A3152B97E000D0B2A9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4FC5A2152B97E000D0B2A9 /* libz.dylib */; };
 		1A68CADB151FEF4B00A60755 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A68CADA151FEF4B00A60755 /* UIKit.framework */; };
 		1A68CADD151FEF4B00A60755 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A68CADC151FEF4B00A60755 /* Foundation.framework */; };
 		1A68CADF151FEF4B00A60755 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A68CADE151FEF4B00A60755 /* CoreGraphics.framework */; };
@@ -24,7 +50,8 @@
 		1A68CAEE151FEF4B00A60755 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A68CAEC151FEF4B00A60755 /* MainWindow.xib */; };
 		1A68CAF1151FEF4C00A60755 /* Breezy_SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A68CAF0151FEF4C00A60755 /* Breezy_SampleViewController.m */; };
 		1A68CAF4151FEF4C00A60755 /* Breezy_SampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A68CAF2151FEF4C00A60755 /* Breezy_SampleViewController.xib */; };
-		1AA011EF15251E9D00A92B4F /* BreezyMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA011EE15251E9D00A92B4F /* BreezyMain.m */; };
+		1AD885DF152B99D500185D82 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD885DE152B99D500185D82 /* Security.framework */; };
+		1AD885E2152B9A0F00185D82 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD885E1152B9A0F00185D82 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +62,62 @@
 		1A01F66C15227A8B00886C43 /* iphone_button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone_button_normal.png; sourceTree = "<group>"; };
 		1A01F66E15227A9500886C43 /* iphone_button_disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone_button_disabled.png; sourceTree = "<group>"; };
 		1A01F67015227A9F00886C43 /* iphone_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone_button_pressed.png; sourceTree = "<group>"; };
-		1A01F6731522AD2F00886C43 /* demo_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo_retina.png; sourceTree = "<group>"; };
-		1A01F6751522AD4500886C43 /* demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo.png; sourceTree = "<group>"; };
+		1A01F6731522AD2F00886C43 /* demo_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = demo_retina.png; path = ../demo_retina.png; sourceTree = "<group>"; };
+		1A01F6751522AD4500886C43 /* demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = demo.png; path = ../demo.png; sourceTree = "<group>"; };
+		1A4FBF55152B960A00D0B2A9 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		1A4FBF56152B960A00D0B2A9 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		1A4FBF57152B960A00D0B2A9 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		1A4FBF58152B960A00D0B2A9 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		1A4FBF59152B960A00D0B2A9 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		1A4FBF5A152B960A00D0B2A9 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		1A4FBF5B152B960A00D0B2A9 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		1A4FBF5C152B960A00D0B2A9 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		1A4FBF5D152B960A00D0B2A9 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		1A4FBF5E152B960A00D0B2A9 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		1A4FBF5F152B960A00D0B2A9 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		1A4FBF60152B960A00D0B2A9 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		1A4FBF61152B960A00D0B2A9 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		1A4FBF62152B960A00D0B2A9 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		1A4FBF63152B960A00D0B2A9 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		1A4FBF64152B960A00D0B2A9 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		1A4FBF65152B960A00D0B2A9 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		1A4FBF66152B960A00D0B2A9 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		1A4FBF67152B960A00D0B2A9 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		1A4FBF68152B960A00D0B2A9 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		1A4FBF7B152B960A00D0B2A9 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		1A4FBF7C152B960A00D0B2A9 /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		1A4FBF84152B960A00D0B2A9 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		1A4FBF8C152B960A00D0B2A9 /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
+		1A4FBF8D152B960A00D0B2A9 /* NSObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
+		1A4FC4C4152B960B00D0B2A9 /* PrintModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrintModule.m; path = ../PrintModule.m; sourceTree = "<group>"; };
+		1A4FC4C5152B960B00D0B2A9 /* PrintModuleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrintModuleDelegate.h; path = ../PrintModuleDelegate.h; sourceTree = "<group>"; };
+		1A4FC4D7152B960B00D0B2A9 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		1A4FC4D8152B960B00D0B2A9 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		1A4FC4D9152B960B00D0B2A9 /* SBJsonIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonIncludes.h; sourceTree = "<group>"; };
+		1A4FC4DA152B960B00D0B2A9 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		1A4FC4DB152B960B00D0B2A9 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		1A4FC4DC152B960B00D0B2A9 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		1A4FC4DD152B960B00D0B2A9 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		1A4FC4DE152B960B00D0B2A9 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		1A4FC4DF152B960B00D0B2A9 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		1A4FC4E0152B960B00D0B2A9 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		1A4FC4E1152B960B00D0B2A9 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		1A4FC4E2152B960B00D0B2A9 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		1A4FC4E3152B960B00D0B2A9 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		1A4FC4E4152B960B00D0B2A9 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		1A4FC4E5152B960B00D0B2A9 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		1A4FC4E6152B960B00D0B2A9 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		1A4FC4E7152B960B00D0B2A9 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		1A4FC4E8152B960B00D0B2A9 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		1A4FC4E9152B960B00D0B2A9 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		1A4FC4EA152B960B00D0B2A9 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		1A4FC4EB152B960B00D0B2A9 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		1A4FC4EC152B960B00D0B2A9 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		1A4FC4ED152B960B00D0B2A9 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		1A4FC59C152B97CA00D0B2A9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1A4FC59E152B97CE00D0B2A9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1A4FC5A0152B97D400D0B2A9 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		1A4FC5A2152B97E000D0B2A9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		1A68CAD6151FEF4B00A60755 /* Breezy Photo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Breezy Photo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A68CADA151FEF4B00A60755 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1A68CADC151FEF4B00A60755 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,8 +132,9 @@
 		1A68CAEF151FEF4B00A60755 /* Breezy_SampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Breezy_SampleViewController.h; sourceTree = "<group>"; };
 		1A68CAF0151FEF4C00A60755 /* Breezy_SampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Breezy_SampleViewController.m; sourceTree = "<group>"; };
 		1A68CAF3151FEF4C00A60755 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Breezy_SampleViewController.xib; sourceTree = "<group>"; };
-		1AA011ED15251E9D00A92B4F /* BreezyMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BreezyMain.h; sourceTree = "<group>"; };
-		1AA011EE15251E9D00A92B4F /* BreezyMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BreezyMain.m; sourceTree = "<group>"; };
+		1AD885DE152B99D500185D82 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1AD885E1152B9A0F00185D82 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1AD885E5152B9B8700185D82 /* PrintModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintModule.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +142,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD885E2152B9A0F00185D82 /* StoreKit.framework in Frameworks */,
+				1AD885DF152B99D500185D82 /* Security.framework in Frameworks */,
+				1A4FC5A3152B97E000D0B2A9 /* libz.dylib in Frameworks */,
+				1A4FC5A1152B97D400D0B2A9 /* MobileCoreServices.framework in Frameworks */,
+				1A4FC59F152B97CE00D0B2A9 /* SystemConfiguration.framework in Frameworks */,
+				1A4FC59D152B97CA00D0B2A9 /* CFNetwork.framework in Frameworks */,
 				1A01F6581521925700886C43 /* AssetsLibrary.framework in Frameworks */,
 				1A68CADB151FEF4B00A60755 /* UIKit.framework in Frameworks */,
 				1A68CADD151FEF4B00A60755 /* Foundation.framework in Frameworks */,
@@ -70,22 +158,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A01F6721522AB0800886C43 /* Assests */ = {
+		1A01F6721522AB0800886C43 /* Image Assests */ = {
 			isa = PBXGroup;
 			children = (
+				1A01F6751522AD4500886C43 /* demo.png */,
+				1A01F6731522AD2F00886C43 /* demo_retina.png */,
 				1A01F67015227A9F00886C43 /* iphone_button_pressed.png */,
 				1A01F66E15227A9500886C43 /* iphone_button_disabled.png */,
 				1A01F66C15227A8B00886C43 /* iphone_button_normal.png */,
 				1A01F66615221FE800886C43 /* clouds.png */,
 			);
-			name = Assests;
+			name = "Image Assests";
+			sourceTree = "<group>";
+		};
+		1A4FBF51152B960A00D0B2A9 /* BreezySDK */ = {
+			isa = PBXGroup;
+			children = (
+				1AD885E6152B9CF800185D82 /* Third Party Libraries */,
+				1A4FBF6B152B960A00D0B2A9 /* Modules */,
+				1AD885E4152B9AAA00185D82 /* Classes */,
+			);
+			path = BreezySDK;
+			sourceTree = "<group>";
+		};
+		1A4FBF6B152B960A00D0B2A9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1AD885E5152B9B8700185D82 /* PrintModule.h */,
+				1A4FC4C4152B960B00D0B2A9 /* PrintModule.m */,
+				1A4FC4C5152B960B00D0B2A9 /* PrintModuleDelegate.h */,
+			);
+			name = Modules;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1A4FC4D6152B960B00D0B2A9 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				1A4FC4D7152B960B00D0B2A9 /* Reachability.h */,
+				1A4FC4D8152B960B00D0B2A9 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		1A4FC59A152B964100D0B2A9 /* ASIHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				1A4FC4D6152B960B00D0B2A9 /* Reachability */,
+				1A4FBF55152B960A00D0B2A9 /* ASIAuthenticationDialog.h */,
+				1A4FBF56152B960A00D0B2A9 /* ASIAuthenticationDialog.m */,
+				1A4FBF57152B960A00D0B2A9 /* ASICacheDelegate.h */,
+				1A4FBF58152B960A00D0B2A9 /* ASIDataCompressor.h */,
+				1A4FBF59152B960A00D0B2A9 /* ASIDataCompressor.m */,
+				1A4FBF5A152B960A00D0B2A9 /* ASIDataDecompressor.h */,
+				1A4FBF5B152B960A00D0B2A9 /* ASIDataDecompressor.m */,
+				1A4FBF5C152B960A00D0B2A9 /* ASIDownloadCache.h */,
+				1A4FBF5D152B960A00D0B2A9 /* ASIDownloadCache.m */,
+				1A4FBF5E152B960A00D0B2A9 /* ASIFormDataRequest.h */,
+				1A4FBF5F152B960A00D0B2A9 /* ASIFormDataRequest.m */,
+				1A4FBF60152B960A00D0B2A9 /* ASIHTTPRequest.h */,
+				1A4FBF61152B960A00D0B2A9 /* ASIHTTPRequest.m */,
+				1A4FBF62152B960A00D0B2A9 /* ASIHTTPRequestConfig.h */,
+				1A4FBF63152B960A00D0B2A9 /* ASIHTTPRequestDelegate.h */,
+				1A4FBF64152B960A00D0B2A9 /* ASIInputStream.h */,
+				1A4FBF65152B960A00D0B2A9 /* ASIInputStream.m */,
+				1A4FBF66152B960A00D0B2A9 /* ASINetworkQueue.h */,
+				1A4FBF67152B960A00D0B2A9 /* ASINetworkQueue.m */,
+				1A4FBF68152B960A00D0B2A9 /* ASIProgressDelegate.h */,
+			);
+			name = ASIHTTP;
 			sourceTree = "<group>";
 		};
 		1A68CACB151FEF4B00A60755 = {
 			isa = PBXGroup;
 			children = (
-				1A01F6751522AD4500886C43 /* demo.png */,
-				1A01F6731522AD2F00886C43 /* demo_retina.png */,
+				1AD885E1152B9A0F00185D82 /* StoreKit.framework */,
+				1AD885DE152B99D500185D82 /* Security.framework */,
+				1A4FC5A2152B97E000D0B2A9 /* libz.dylib */,
+				1A4FC5A0152B97D400D0B2A9 /* MobileCoreServices.framework */,
+				1A4FC59E152B97CE00D0B2A9 /* SystemConfiguration.framework */,
+				1A4FC59C152B97CA00D0B2A9 /* CFNetwork.framework */,
 				1A01F6571521925700886C43 /* AssetsLibrary.framework */,
 				1A68CAE0151FEF4B00A60755 /* Breezy-Sample */,
 				1A68CAD9151FEF4B00A60755 /* Frameworks */,
@@ -114,14 +266,14 @@
 		1A68CAE0151FEF4B00A60755 /* Breezy-Sample */ = {
 			isa = PBXGroup;
 			children = (
-				1AA011F115252BBE00A92B4F /* SDK */,
-				1A01F6721522AB0800886C43 /* Assests */,
+				1A4FBF51152B960A00D0B2A9 /* BreezySDK */,
 				1A68CAE9151FEF4B00A60755 /* Breezy_SampleAppDelegate.h */,
 				1A68CAEA151FEF4B00A60755 /* Breezy_SampleAppDelegate.m */,
 				1A68CAEC151FEF4B00A60755 /* MainWindow.xib */,
 				1A68CAEF151FEF4B00A60755 /* Breezy_SampleViewController.h */,
 				1A68CAF0151FEF4C00A60755 /* Breezy_SampleViewController.m */,
 				1A68CAF2151FEF4C00A60755 /* Breezy_SampleViewController.xib */,
+				1A01F6721522AB0800886C43 /* Image Assests */,
 				1A68CAE1151FEF4B00A60755 /* Supporting Files */,
 			);
 			path = "Breezy-Sample";
@@ -140,13 +292,53 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1AA011F115252BBE00A92B4F /* SDK */ = {
+		1AD885E3152B9A5C00185D82 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				1AA011ED15251E9D00A92B4F /* BreezyMain.h */,
-				1AA011EE15251E9D00A92B4F /* BreezyMain.m */,
+				1A4FBF8C152B960A00D0B2A9 /* NSObject+JSON.h */,
+				1A4FBF8D152B960A00D0B2A9 /* NSObject+JSON.m */,
+				1A4FBF84152B960A00D0B2A9 /* JSON.h */,
+				1A4FC4D9152B960B00D0B2A9 /* SBJsonIncludes.h */,
+				1A4FC4DA152B960B00D0B2A9 /* SBJsonParser.h */,
+				1A4FC4DB152B960B00D0B2A9 /* SBJsonParser.m */,
+				1A4FC4DC152B960B00D0B2A9 /* SBJsonStreamParser.h */,
+				1A4FC4DD152B960B00D0B2A9 /* SBJsonStreamParser.m */,
+				1A4FC4DE152B960B00D0B2A9 /* SBJsonStreamParserAccumulator.h */,
+				1A4FC4DF152B960B00D0B2A9 /* SBJsonStreamParserAccumulator.m */,
+				1A4FC4E0152B960B00D0B2A9 /* SBJsonStreamParserAdapter.h */,
+				1A4FC4E1152B960B00D0B2A9 /* SBJsonStreamParserAdapter.m */,
+				1A4FC4E2152B960B00D0B2A9 /* SBJsonStreamParserState.h */,
+				1A4FC4E3152B960B00D0B2A9 /* SBJsonStreamParserState.m */,
+				1A4FC4E4152B960B00D0B2A9 /* SBJsonStreamWriter.h */,
+				1A4FC4E5152B960B00D0B2A9 /* SBJsonStreamWriter.m */,
+				1A4FC4E6152B960B00D0B2A9 /* SBJsonStreamWriterAccumulator.h */,
+				1A4FC4E7152B960B00D0B2A9 /* SBJsonStreamWriterAccumulator.m */,
+				1A4FC4E8152B960B00D0B2A9 /* SBJsonStreamWriterState.h */,
+				1A4FC4E9152B960B00D0B2A9 /* SBJsonStreamWriterState.m */,
+				1A4FC4EA152B960B00D0B2A9 /* SBJsonTokeniser.h */,
+				1A4FC4EB152B960B00D0B2A9 /* SBJsonTokeniser.m */,
+				1A4FC4EC152B960B00D0B2A9 /* SBJsonWriter.h */,
+				1A4FC4ED152B960B00D0B2A9 /* SBJsonWriter.m */,
 			);
-			name = SDK;
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		1AD885E4152B9AAA00185D82 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1A4FBF7B152B960A00D0B2A9 /* Document.h */,
+				1A4FBF7C152B960A00D0B2A9 /* Document.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1AD885E6152B9CF800185D82 /* Third Party Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1AD885E3152B9A5C00185D82 /* JSON */,
+				1A4FC59A152B964100D0B2A9 /* ASIHTTP */,
+			);
+			name = "Third Party Libraries";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +411,28 @@
 				1A68CAEB151FEF4B00A60755 /* Breezy_SampleAppDelegate.m in Sources */,
 				1A68CAF1151FEF4C00A60755 /* Breezy_SampleViewController.m in Sources */,
 				1A01F66B15227A6C00886C43 /* BreezyButton.m in Sources */,
-				1AA011EF15251E9D00A92B4F /* BreezyMain.m in Sources */,
+				1A4FC4FF152B960C00D0B2A9 /* ASIAuthenticationDialog.m in Sources */,
+				1A4FC500152B960C00D0B2A9 /* ASIDataCompressor.m in Sources */,
+				1A4FC501152B960C00D0B2A9 /* ASIDataDecompressor.m in Sources */,
+				1A4FC502152B960C00D0B2A9 /* ASIDownloadCache.m in Sources */,
+				1A4FC503152B960C00D0B2A9 /* ASIFormDataRequest.m in Sources */,
+				1A4FC504152B960C00D0B2A9 /* ASIHTTPRequest.m in Sources */,
+				1A4FC505152B960C00D0B2A9 /* ASIInputStream.m in Sources */,
+				1A4FC506152B960C00D0B2A9 /* ASINetworkQueue.m in Sources */,
+				1A4FC50F152B960C00D0B2A9 /* Document.m in Sources */,
+				1A4FC516152B960C00D0B2A9 /* NSObject+JSON.m in Sources */,
+				1A4FC57F152B960D00D0B2A9 /* PrintModule.m in Sources */,
+				1A4FC587152B960D00D0B2A9 /* Reachability.m in Sources */,
+				1A4FC588152B960D00D0B2A9 /* SBJsonParser.m in Sources */,
+				1A4FC589152B960D00D0B2A9 /* SBJsonStreamParser.m in Sources */,
+				1A4FC58A152B960D00D0B2A9 /* SBJsonStreamParserAccumulator.m in Sources */,
+				1A4FC58B152B960D00D0B2A9 /* SBJsonStreamParserAdapter.m in Sources */,
+				1A4FC58C152B960D00D0B2A9 /* SBJsonStreamParserState.m in Sources */,
+				1A4FC58D152B960D00D0B2A9 /* SBJsonStreamWriter.m in Sources */,
+				1A4FC58E152B960D00D0B2A9 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				1A4FC58F152B960D00D0B2A9 /* SBJsonStreamWriterState.m in Sources */,
+				1A4FC590152B960D00D0B2A9 /* SBJsonTokeniser.m in Sources */,
+				1A4FC591152B960D00D0B2A9 /* SBJsonWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +518,14 @@
 				GCC_PREFIX_HEADER = "Breezy-Sample/Breezy-Sample-Prefix.pch";
 				INFOPLIST_FILE = "Breezy-Sample/Breezy-Sample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Breezy-Sample/BreezySDK/openssl/iPhoneOS-4.1/lib\"",
+					"\"$(SRCROOT)/Breezy-Sample/BreezySDK/openssl/iPhoneOS-V6-4.3/lib\"",
+					"\"$(SRCROOT)/Breezy-Sample/BreezySDK/openssl/iPhoneOS-V7-4.3/lib\"",
+					"\"$(SRCROOT)/Breezy-Sample/BreezySDK/openssl/iPhoneSimulator-4.1/lib\"",
+					"\"$(SRCROOT)/Breezy-Sample/BreezySDK/openssl/iPhoneSimulator-4.3/lib\"",
+				);
 				PRODUCT_NAME = "Breezy Photo";
 				PROVISIONING_PROFILE = "5E09BC92-EC42-402C-9E6F-96CDCEE5E446";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5E09BC92-EC42-402C-9E6F-96CDCEE5E446";
@@ -320,6 +541,14 @@
 				GCC_PREFIX_HEADER = "Breezy-Sample/Breezy-Sample-Prefix.pch";
 				INFOPLIST_FILE = "Breezy-Sample/Breezy-Sample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Breezy-Sample/BreezySDK/openssl/iPhoneOS-4.1/lib\"",
+					"\"$(SRCROOT)/Breezy-Sample/BreezySDK/openssl/iPhoneOS-V6-4.3/lib\"",
+					"\"$(SRCROOT)/Breezy-Sample/BreezySDK/openssl/iPhoneOS-V7-4.3/lib\"",
+					"\"$(SRCROOT)/Breezy-Sample/BreezySDK/openssl/iPhoneSimulator-4.1/lib\"",
+					"\"$(SRCROOT)/Breezy-Sample/BreezySDK/openssl/iPhoneSimulator-4.3/lib\"",
+				);
 				PRODUCT_NAME = "Breezy Photo";
 				PROVISIONING_PROFILE = "5E09BC92-EC42-402C-9E6F-96CDCEE5E446";
 				WRAPPER_EXTENSION = app;

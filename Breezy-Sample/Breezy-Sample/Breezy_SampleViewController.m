@@ -10,7 +10,35 @@
 
 
 @implementation Breezy_SampleViewController
-@synthesize imgPicker;
+@synthesize imgPicker, imageURL;
+
+///////////////////////////////////
+//Breezy SDK Required Code - Begin
+///////////////////////////////////
+- (IBAction)printWithBreezy {
+    
+    PrintModule *breezy = [[PrintModule alloc] init];
+    breezy.delegate = self;
+    [breezy sendDocumentToBreezy:imageURL];
+    
+}
+
+-(void)sendingDocument
+{
+    NSLog(@"*Alert the user the document is sending");
+}
+-(void)sendingDocumentFailed: (NSError *)error
+{
+    NSLog(@"Alert the user the process has failed.");
+    NSLog(@"with error | %@",[error description]);
+}
+-(void)sendingDocumentComplete
+{
+    NSLog(@"*Alert the user the proess is complete and call the breezy app with the documentID");
+}
+/////////////////////////////////
+//Breezy SDK Required Code - End
+/////////////////////////////////
 
 
 - (void)didReceiveMemoryWarning
@@ -33,7 +61,6 @@
     self.imgPicker.allowsImageEditing = YES;
     self.imgPicker.delegate = self;
     self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-
 }
 
 
@@ -50,60 +77,6 @@
 - (IBAction)grabImage {
     [self presentModalViewController:self.imgPicker animated:YES];
 }
-
-- (IBAction)printWithBreezy {
-   
-    
-	//get the documents directory:
-	NSArray *paths = NSSearchPathForDirectoriesInDomains
-	(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *documentsDirectory = [paths objectAtIndex:0];
-
-	NSString *fileName = [NSString stringWithFormat:@"%@/textfile.txt.breezy", 
-						  documentsDirectory];
-    
-    
-    NSURL *url = [NSURL fileURLWithPath:fileName];
-
-	NSString *content = @"One\nTwo\nThree\nFour\nFive";
-	
-    NSError *error;
-	BOOL ok = [content writeToFile:fileName 
-			  atomically:NO 
-				encoding:NSStringEncodingConversionAllowLossy 
-				   error:&error];
-    
-    if (!ok)
-    {
-        NSLog(@"Error writing file at %@\n%@ %@",
-              fileName, [error localizedFailureReason], [error description]);
-    }
-       UIDocumentInteractionController *doc=[[UIDocumentInteractionController interactionControllerWithURL:url] retain];
-
-    doc.delegate = self;
-    doc.UTI = @"com.breezy.ios";
-    
-    BOOL isValid = [doc presentOpenInMenuFromRect:CGRectZero inView:self.view.window animated:YES];
-}
-
-
-//delegates
--(void)documentInteractionController:(UIDocumentInteractionController *)controller 
-       willBeginSendingToApplication:(NSString *)application {
-    NSLog(@"1 willBeginSendingToApplication || %@",application);
-    
-}
-
--(void)documentInteractionController:(UIDocumentInteractionController *)controller 
-          didEndSendingToApplication:(NSString *)application {
-     NSLog(@"2");
-}
-
--(void)documentInteractionControllerDidDismissOpenInMenu:
-(UIDocumentInteractionController *)controller {
-     NSLog(@"3");
-}
-
 
 - (void)imagePickerController:(UIImagePickerController *)picker 
 didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -128,6 +101,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     if (selectedImage != nil)
     {
         image.image = selectedImage;
+       
     }
     NSURL *url = [info objectForKey:@"UIImagePickerControllerReferenceURL"];
     ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
@@ -138,11 +112,14 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
             UIImage *largeimage = [UIImage imageWithCGImage:iref];
             [largeimage retain];
             
-            NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); 
+            NSArray* paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES); 
             NSString* documentsDirectory = [paths objectAtIndex:0];
             
-            NSString* imageFile = [documentsDirectory stringByAppendingPathComponent:@"test.jpg"];
+            NSString* imageFile = [documentsDirectory stringByAppendingPathComponent:@"BreezyDemo.jpg"];
             [UIImageJPEGRepresentation(largeimage, 10.0) writeToFile:imageFile atomically:YES];
+            
+            NSLog(@"setting url %@",imageFile);
+            imageURL = [[NSURL alloc] initFileURLWithPath:imageFile];
             [printButton setHidden:NO];
        
         }
@@ -157,4 +134,14 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
                        resultBlock:resultblock
                       failureBlock:failureblock];
     }
+
+
+-(void) dealloc
+{
+    [imageURL release];
+    [super dealloc];
+}
+
+
 @end
+
