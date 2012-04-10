@@ -10,7 +10,7 @@
 
 @interface Breezy_SampleViewController : UIViewController <UIImagePickerControllerDelegate, UIDocumentInteractionControllerDelegate, PrintModuleDelegate, UIAlertViewDelegate, UINavigationControllerDelegate>
 {
-    IBOutlet UIButton *button;
+    IBOutlet UIButton *selectButton;
     IBOutlet UIButton *printButton;
     IBOutlet UIImageView *image;
     UIImagePickerController *imgPicker;

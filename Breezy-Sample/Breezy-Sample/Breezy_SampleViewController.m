@@ -40,6 +40,8 @@
 //delegate fired when document start sending
 -(void)sendingDocument
 {   
+    //Show a waiting dialog to inform the user the document is loading
+    [selectButton setHidden:YES];
     [printButton setHidden:YES];
     [progressView setHidden:NO];
 }
@@ -58,7 +60,7 @@
 //delegate fired when document is sent successfully
 -(void)sendingDocumentComplete:(int)documentId;
 {
-    
+    [selectButton setHidden:NO];
     [printButton setHidden:NO];
     [progressView setHidden:YES];
     
@@ -97,7 +99,7 @@
 
     progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleBar];
     [self.view addSubview:progressView];
-    progressView.frame = CGRectMake(printButton.frame.origin.x, printButton.frame.origin.y+10, printButton.frame.size.width, printButton.frame.size.height);
+    progressView.frame = CGRectMake(selectButton.frame.origin.x, printButton.frame.origin.y+10, 289, printButton.frame.size.height);
     [progressView setHidden:YES];
     
     self.imgPicker = [[UIImagePickerController alloc] init];
@@ -156,17 +158,15 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
             
             NSArray* paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES); 
             NSString* documentsDirectory = [paths objectAtIndex:0];
-            
-            NSString* imageFile = [documentsDirectory stringByAppendingPathComponent:@"BreezyDemo.jpg"];
+            NSLog(@"file name %@",[url lastPathComponent]);
+            NSString* imageFile = [documentsDirectory stringByAppendingPathComponent:[url lastPathComponent]];
             [UIImageJPEGRepresentation(largeimage, 10.0) writeToFile:imageFile atomically:YES];
             
             imageURL = [[NSURL alloc] initFileURLWithPath:imageFile];
             [printButton setHidden:NO];
         }
     };
-    ALAssetsLibraryAccessFailureBlock failureblock  = ^(NSError *myerror)
-    {
-    };
+    ALAssetsLibraryAccessFailureBlock failureblock  = ^(NSError *myerror) {};
     ALAssetsLibrary* assetslibrary = [[[ALAssetsLibrary alloc] init] autorelease];
     [assetslibrary assetForURL:url 
                    resultBlock:resultblock
