@@ -1,9 +1,5 @@
-//
-//  Breezy_SampleAppDelegate.h
-//  Breezy-Sample
-//
-//  Created by James on 3/25/12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//  
+//  Copyright 2012 BreezyPrint Corporation. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

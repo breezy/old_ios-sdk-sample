@@ -269,9 +269,9 @@
 				1A4FBF51152B960A00D0B2A9 /* BreezySDK */,
 				1A68CAE9151FEF4B00A60755 /* Breezy_SampleAppDelegate.h */,
 				1A68CAEA151FEF4B00A60755 /* Breezy_SampleAppDelegate.m */,
-				1A68CAEC151FEF4B00A60755 /* MainWindow.xib */,
 				1A68CAEF151FEF4B00A60755 /* Breezy_SampleViewController.h */,
 				1A68CAF0151FEF4C00A60755 /* Breezy_SampleViewController.m */,
+				1A68CAEC151FEF4B00A60755 /* MainWindow.xib */,
 				1A68CAF2151FEF4C00A60755 /* Breezy_SampleViewController.xib */,
 				1A01F6721522AB0800886C43 /* Image Assests */,
 				1A68CAE1151FEF4B00A60755 /* Supporting Files */,
@@ -518,7 +518,7 @@
 				GCC_PREFIX_HEADER = "Breezy-Sample/Breezy-Sample-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Breezy-Sample/Breezy-Sample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Breezy-Sample/BreezySDK/openssl/iPhoneOS-4.1/lib\"",
@@ -530,6 +530,7 @@
 				PRODUCT_NAME = "Breezy Photo";
 				PROVISIONING_PROFILE = "5E09BC92-EC42-402C-9E6F-96CDCEE5E446";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5E09BC92-EC42-402C-9E6F-96CDCEE5E446";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -542,7 +543,7 @@
 				GCC_PREFIX_HEADER = "Breezy-Sample/Breezy-Sample-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Breezy-Sample/Breezy-Sample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Breezy-Sample/BreezySDK/openssl/iPhoneOS-4.1/lib\"",
@@ -553,6 +554,7 @@
 				);
 				PRODUCT_NAME = "Breezy Photo";
 				PROVISIONING_PROFILE = "5E09BC92-EC42-402C-9E6F-96CDCEE5E446";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

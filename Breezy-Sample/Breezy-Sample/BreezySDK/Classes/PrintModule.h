@@ -15,11 +15,7 @@
 @property (assign) id<PrintModuleDelegate> delegate;
 @property (retain) NSOperationQueue *requestQueue;
 
-
-//-(void)printDocument:(Printer *)printer: (NSURL *)documentUrl: (UIProgressView *)progressIndicator :(bool)encrypt;
-
--(void)sendDocumentToBreezy:(NSURL *)documentUrl;
-
+-(void)sendDocumentToBreezy:(NSURL *)documentUrl:(UIProgressView *)progressIndicator;
 -(void)cancelPrinting;
 
 

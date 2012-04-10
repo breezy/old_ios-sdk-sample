@@ -1,5 +1,5 @@
 //  
-//  Copyright 2011 BreezyPrint Corporation. All rights reserved.
+//  Copyright 2012 BreezyPrint Corporation. All rights reserved.
 //
 
 #import "Document.h"
@@ -8,8 +8,6 @@
 @implementation Document
 
 @synthesize documentName, extension, documentPath, documentData;
-
-#pragma setup
 
 //initializes the document object with the file that was opened
 -(id)initWithDocumentPath:(NSURL *)urlToLoad

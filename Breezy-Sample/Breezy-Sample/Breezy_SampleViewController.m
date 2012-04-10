@@ -1,21 +1,23 @@
-//
-//  Breezy_SampleViewController.m
-//  Breezy-Sample
-//
-//  Created by James on 3/25/12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//  
+//  Copyright 2012 BreezyPrint Corporation. All rights reserved.
 //
 
 #import "Breezy_SampleViewController.h"
 
-
 @implementation Breezy_SampleViewController
-@synthesize imgPicker, imageURL;
+@synthesize imgPicker, imageURL, progressView;
+
+
 
 ///////////////////////////////////
 //Breezy SDK Required Code - Begin
+///////////////////////////////////
+
 - (IBAction)printWithBreezy {
-    NSString *stringURL = [[NSString alloc] initWithString:@"breezy://document_id=?"];
+    
+    //Confirm Breezy is installed on iOS before launching the Breezy app. 
+    //If it's not installed then alert the user to download the app.
+    NSString *stringURL = [[NSString alloc] initWithString:@"breezy://"];
     NSURL *url = [NSURL URLWithString:stringURL];
     if(![[UIApplication sharedApplication] canOpenURL:url])
     {
@@ -31,31 +33,47 @@
     {
     PrintModule *breezy = [[PrintModule alloc] init];
     breezy.delegate = self;
-    [breezy sendDocumentToBreezy:imageURL];
+    [breezy sendDocumentToBreezy:imageURL:progressView];
     }
 }
 
+//delegate fired when document start sending
 -(void)sendingDocument
-{
-    NSLog(@"Show loading modal with existing framework");
+{   
+    [printButton setHidden:YES];
+    [progressView setHidden:NO];
 }
+
+//delegate fired when document fails
 -(void)sendingDocumentFailed: (NSError *)error
 {
-    NSLog(@"Alert the user the process has failed with error %@",[error description]);
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                      message:@"There was an error communicating with the Breezy print service.\nPlease try again."
+                                                     delegate:nil
+                                            cancelButtonTitle:@"Ok"
+                                            otherButtonTitles:nil];
+    [message show];
 }
+
+//delegate fired when document is sent successfully
 -(void)sendingDocumentComplete:(int)documentId;
 {
-    NSString *stringURL = [[NSString alloc] initWithFormat:@"breezy://document_id=%i",documentId];
+    
+    [printButton setHidden:NO];
+    [progressView setHidden:YES];
+    
+    NSString *stringURL = [[NSString alloc] initWithFormat:@"breezy://document_id=%i&customUrl=%@",documentId,@"breezyphoto"];
     NSURL *url = [NSURL URLWithString:stringURL];
     [[UIApplication sharedApplication] openURL:url];
+    [stringURL release];
 }
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (alertView.tag == 1 && buttonIndex == 1) {
         [[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"http://itunes.apple.com/us/app/breezy-print-and-fax/id438846342?mt=8&uo=6"]];
     }
 }
-
 /////////////////////////////////
 //Breezy SDK Required Code - End
 /////////////////////////////////
@@ -77,8 +95,12 @@
 {
     [super viewDidLoad];
 
+    progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleBar];
+    [self.view addSubview:progressView];
+    progressView.frame = CGRectMake(printButton.frame.origin.x, printButton.frame.origin.y+10, printButton.frame.size.width, printButton.frame.size.height);
+    [progressView setHidden:YES];
+    
     self.imgPicker = [[UIImagePickerController alloc] init];
-    self.imgPicker.allowsImageEditing = YES;
     self.imgPicker.delegate = self;
     self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 }
@@ -121,7 +143,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     if (selectedImage != nil)
     {
         image.image = selectedImage;
-       
+        
     }
     NSURL *url = [info objectForKey:@"UIImagePickerControllerReferenceURL"];
     ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
@@ -138,27 +160,24 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
             NSString* imageFile = [documentsDirectory stringByAppendingPathComponent:@"BreezyDemo.jpg"];
             [UIImageJPEGRepresentation(largeimage, 10.0) writeToFile:imageFile atomically:YES];
             
-            NSLog(@"setting url %@",imageFile);
             imageURL = [[NSURL alloc] initFileURLWithPath:imageFile];
             [printButton setHidden:NO];
-       
         }
     };
     ALAssetsLibraryAccessFailureBlock failureblock  = ^(NSError *myerror)
     {
     };
-    
-
-        ALAssetsLibrary* assetslibrary = [[[ALAssetsLibrary alloc] init] autorelease];
-        [assetslibrary assetForURL:url 
-                       resultBlock:resultblock
-                      failureBlock:failureblock];
-    }
+    ALAssetsLibrary* assetslibrary = [[[ALAssetsLibrary alloc] init] autorelease];
+    [assetslibrary assetForURL:url 
+                   resultBlock:resultblock
+                  failureBlock:failureblock];
+}
 
 
 -(void) dealloc
 {
     [imageURL release];
+    [progressView release];
     [super dealloc];
 }
 

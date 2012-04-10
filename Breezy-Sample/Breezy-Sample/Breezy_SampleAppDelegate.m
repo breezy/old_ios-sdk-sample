@@ -1,9 +1,5 @@
-//
-//  Breezy_SampleAppDelegate.m
-//  Breezy-Sample
-//
-//  Created by James on 3/25/12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//  
+//  Copyright 2012 BreezyPrint Corporation. All rights reserved.
 //
 
 #import "Breezy_SampleAppDelegate.h"
@@ -14,6 +10,11 @@
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    // handler code here
+    return TRUE;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
