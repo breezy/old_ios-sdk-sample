@@ -9,4 +9,4 @@ This is an example app using the Breezy SDK.  It demonstrates how to use the Bre
 Docs
 =======================
 
-Check out the Breezy SDK documentation at github.breezy.com
+Check out the Breezy SDK documentation at http://breezy.github.com
