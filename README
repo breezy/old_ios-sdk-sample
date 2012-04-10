@@ -1,11 +1,12 @@
+=======================
+Breezy SDK Example App
+=======================
 
-To open an image or file with Breezy follow the example below:
-
-NSURL *url = [NSURL fileURLWithPath:imageFile];
-NSString* urlString = [NSString stringWithFormat:@"breezy://%@", url];
-[[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+This is an example app using the Breezy SDK.  It demonstrates how to use the Breezy SDK in existing apps.
 
 
-NSURL *url = [NSURL fileURLWithPath:imageFile];
-NSString* urlString = [NSString stringWithFormat:@"breezy://%@", url];
-[[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+=======================
+Docs
+=======================
+
+Check out the Breezy SDK documentation at github.breezy.com
